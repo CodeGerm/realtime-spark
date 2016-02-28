@@ -5,16 +5,17 @@ The project inscludes following docker containers:
 1. hadoop-docker : a docker container with hadoop/yarn cluster with spark assembly preinstalled
 2. spark-jobserver-docker :  a docker container with spark jobserver which is pointing to the yarn cluster container mentioned above
 
-# Test
+# How to run the realtime-spark
 
-1. git pull this project 
-2. Run docker compose. It will automatically build the docker images and run docker containers. 
+Git pull this project.
+
+Run docker compose. It will automatically build the docker images and run docker containers. 
 ```
 docker-compose up -d
 ```
-3. Test the spark job server ui using a browser @ http://docker host:18090 and also test the yarn @ http://docker host:8088
+Test the spark job server ui using a browser @ http://docker host:18090 and also test the yarn @ http://docker host:8088
 
-4. Run your first spark job, assuming you have built spark example word count jar file.
+Run your first spark job, assuming you have built spark example word count jar file.
 
 Create new application and upload jar
 ```
