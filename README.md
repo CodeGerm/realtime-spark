@@ -2,8 +2,10 @@
 Set of infrastructure Docker images and Docker compose to create a realtime spark system
 
 The project inscludes following docker containers:
-1. hadoop-docker : a docker container with hadoop/yarn cluster with spark assembly preinstalled
-2. spark-jobserver-docker :  a docker container with spark jobserver which is pointing to the yarn cluster container mentioned above
+
+1. hadoop-docker : a docker container with hadoop/yarn cluster with spark assembly preinstalled.
+
+2. spark-jobserver-docker :  a docker container with spark jobserver which is pointing to the yarn cluster container mentioned above.
 
 # How to run the realtime-spark
 
