@@ -1,0 +1,6 @@
+FROM sequenceiq/hadoop-docker
+MAINTAINER yanlinw
+ADD spark-assembly-1.5.2-hadoop2.4.0.jar /spark-assembly-1.5.2-hadoop2.4.0.jar
+RUN service sshd start && $HADOOP_PREFIX/etc/hadoop/hadoop-env.sh && $HADOOP_PREFIX/sbin/start-dfs.sh && sleep 20 && $HADOOP_PREFIX/bin/hdfs dfs -mkdir -p /spark_jars 
+RUN service sshd start && $HADOOP_PREFIX/etc/hadoop/hadoop-env.sh && $HADOOP_PREFIX/sbin/start-dfs.sh && sleep 20 && $HADOOP_PREFIX/bin/hdfs dfs -put /spark-assembly-1.5.2-hadoop2.4.0.jar  /spark_jars/spark-assembly-1.5.2-hadoop2.4.0.jar
+

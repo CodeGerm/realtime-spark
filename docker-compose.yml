@@ -1,0 +1,37 @@
+#MAINTAINER yanlinw
+
+jobserver:
+   build: ./spark-jobserver-docker
+   links: 
+    - hadoop
+   hostname: jobserver 
+   volumes:
+    - ~:/opt/mount/host:rw
+   ports:
+    - "18090:8090" 
+hadoop:
+   build: ./hadoop-docker
+   hostname: hadoop
+   volumes:
+    - ~:/opt/mount/host:rw
+   ports:
+    - "9000:9000"
+    - "50010:50010"
+    - "50020:50020"
+    - "50070:50070"
+    - "50075:50075"
+    - "50090:50090"
+    - "19888"
+    - "8030" 
+    - "8031"
+    - "8032"
+    - "8033" 
+    - "8040"
+    - "8042"
+    - "8088:8088"
+    - "49707"
+    - "2122"
+ 
+
+
+
