@@ -26,7 +26,7 @@ curl --data-binary @job-server-tests/target/scala-2.10/job-server-tests_2.10-0.6
 Run test application 
 
 ```
-propmpt$curl "input.string = a b c a b see" 'docker_host:18090/jobs?appName=test&classPath=spark.jobserver.WordCountExample'
+propmpt$curl -d "input.string = a b c a b see" 'docker_host:18090/jobs?appName=test&classPath=spark.jobserver.WordCountExample'
 
 {
   "status": "STARTED",
