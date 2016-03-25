@@ -48,7 +48,7 @@
   </property>
   <property>
     <name>yarn.scheduler.minimum-allocation-mb</name>
-    <value>1024</value>
+    <value>0</value>
   </property>
   <property>
     <name>yarn.scheduler.increment-allocation-mb</name>
@@ -60,7 +60,7 @@
   </property>
   <property>
     <name>yarn.scheduler.minimum-allocation-vcores</name>
-    <value>1</value>
+    <value>0</value>
   </property>
   <property>
     <name>yarn.scheduler.increment-allocation-vcores</name>
@@ -80,7 +80,7 @@
   </property>
   <property>
     <name>yarn.resourcemanager.am.max-attempts</name>
-    <value>2</value>
+    <value>5</value>
   </property>
   <property>
     <name>yarn.resourcemanager.container.liveness-monitor.interval-ms</name>
@@ -126,4 +126,16 @@
     <name>yarn.resourcemanager.max-completed-applications</name>
     <value>10000</value>
   </property>
+  <property>
+  <description>How often to monitor containers.</description>
+  <name>yarn.nodemanager.container-monitor.interval-ms</name>
+  <value>900000</value>
+</property>
+
+<property>
+  <description>No. of ms to wait between sending a SIGTERM and SIGKILL to a container</description>
+  <name>yarn.nodemanager.sleep-delay-before-sigkill.ms</name>
+  <value>900000</value>
+</property>
+
 </configuration>
