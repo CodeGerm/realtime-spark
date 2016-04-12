@@ -3,7 +3,7 @@ EXPOSE 32456-32472
 
 # Expose driver port range (spark.driver.port + 16)
 
-ADD ./docker.conf /app/docker.conf
+ADD ./*.conf /app/
 # Add the docker.conf to the container
 ADD ./manager_start.sh /app/manager_start.sh
 # Add the docker.conf to the container
