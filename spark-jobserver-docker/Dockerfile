@@ -1,5 +1,5 @@
 FROM yanlinw/spark-jobserver:0.6.2-SNAPSHOT.mesos-0.25.0.spark-1.5.2
-EXPOSE 32456-32472
+#EXPOSE 32456-32472
 
 # Expose driver port range (spark.driver.port + 16)
 
